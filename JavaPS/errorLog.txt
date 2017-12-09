@@ -1,0 +1,19 @@
+数据库异常，异常信息：Data truncation: Data too long for column 'pageview' at row 1；url:http://www.qhwjw.gov.cn/zhxw/xwzx/2010/07/08/1278534710022.html	发生时间：2017-12-09 18:32:31	
+数据库异常，异常信息：Data truncation: Data too long for column 'pageview' at row 1；url:http://www.qhwst.gov.cn/gggs/2010/08/20/1282295965950.html	发生时间：2017-12-09 18:32:35	
+数据库异常，异常信息：Data truncation: Data too long for column 'pageview' at row 1；url:http://www.qhwst.gov.cn/gzdtt/csdt/2011/05/06/1304675906640.html		发生时间：2017-12-09 19:05:31	
+数据库异常，异常信息：Duplicate entry '34d1546fffa00ccd4105ceb63c43e095' for key 'PRIMARY'；url:http://www.qhwst.gov.cn/gzdtt/csdt/2011/05/06/1304673133109.html		发生时间：2017-12-09 19:05:37	
+数据库异常，异常信息：Duplicate entry 'ebe5ce4dc282c7fee1ae9d266f3eac4a' for key 'PRIMARY'；url:http://www.qhwjw.gov.cn/zhxw/xwzx/2012/02/11/1328958194203.html		发生时间：2017-12-09 19:06:43	
+数据库异常，异常信息：Duplicate entry 'a4a66b81c0c9969d121157a06b7cb485' for key 'PRIMARY'；url:http://www.qhwjw.gov.cn/zhxw/xwzx/2012/06/13/1339547947567.html		发生时间：2017-12-09 19:07:12	
+数据库异常，异常信息：Duplicate entry '853cf51a74f4aeb2509c8330c8d99d26' for key 'PRIMARY'；url:http://www.qhwjw.gov.cn/zhxw/xwzx/2012/06/12/1339463656371.html		发生时间：2017-12-09 19:07:12	
+数据库异常，异常信息：Data truncation: Data too long for column 'pageview' at row 1；url:http://www.qhwjw.gov.cn/zhxw/xwzx/2014/01/07/1389062719516.html		发生时间：2017-12-09 19:10:25	
+数据库异常，异常信息：Duplicate entry '5ad96d2d84c95dcdf20e8268957b89a9' for key 'PRIMARY'；url:http://www.qhwjw.gov.cn/zhxw/xwzx/2015/03/27/1427399439527.html		发生时间：2017-12-09 19:12:25	
+数据库异常，异常信息：Duplicate entry 'bc8277c2ff6256d2d26fe570457f6d4f' for key 'PRIMARY'；url:http://www.qhwjw.gov.cn/zhxw/xwzx/2015/03/26/1427363666169.html		发生时间：2017-12-09 19:12:25	
+其他异常，异常信息：ip失效，请修改ip,或者增加睡眠时间；发生时间：2017-12-09 19:12:50	
+其他异常，异常信息：ip失效，请修改ip,或者增加睡眠时间；发生时间：2017-12-09 19:28:13	
+其他异常，异常信息：ip失效，请修改ip,或者增加睡眠时间；发生时间：2017-12-09 19:37:08	
+其他异常，异常信息：ip失效，请修改ip,或者增加睡眠时间；发生时间：2017-12-09 19:37:34	
+其他异常，异常信息：ip失效，请修改ip,或者增加睡眠时间；发生时间：2017-12-09 19:39:22	
+数据库异常，异常信息：Data truncation: Data too long for column 'pageview' at row 1；url:http://www.qhwjw.gov.cn/zhxw/xwzx/2010/07/08/1278534710022.html发生时间：2017-12-09 20:00:54	
+数据库异常，异常信息：Data truncation: Data too long for column 'pageview' at row 1；url:http://www.qhwst.gov.cn/gggs/2010/08/20/1282295965950.html发生时间：2017-12-09 20:00:58	
+数据库异常，异常信息：Data truncation: Data too long for column 'pageview' at row 1；url:http://www.qhwst.gov.cn/gzdtt/csdt/2011/05/06/1304675906640.html发生时间：2017-12-09 20:01:26	
+数据库异常，异常信息：Duplicate entry 'ade769d713d0e3471bb3ad17da7d655b' for key 'PRIMARY'；url:http://www.qhwst.gov.cn/gzdtt/csdt/2011/05/06/1304673133109.html发生时间：2017-12-09 20:01:32	
