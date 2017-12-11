@@ -19,15 +19,7 @@ public class ReadConfigList {
 	public static String listPath;
 	public static String attributeName;
 	public static String prefix;
-	/*
-	 * titlePath=
-authorpath=
-contentPath=
-eventtimePath=
-PageviewPath=
-\u4FE1\u606F\u7D22\u5F15\u53F7Path=
-\u53D1\u5E03\u673A\u6784Path=
-	 */
+	
 	public static HashMap<String, String> pathHashMap;
 	
 	static {
@@ -63,6 +55,7 @@ PageviewPath=
 				
 				pathHashMap.put(dbs[index], properties.get(dbs[index]).toString());
 				pathHashMap.put(dbs[index]+"_sub", properties.get(dbs[index]+"_sub").toString());
+				pathHashMap.put(dbs[index]+"_attr", properties.get(dbs[index]+"_attr").toString());
 				index++;
 			}
 		}

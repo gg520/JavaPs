@@ -18,7 +18,7 @@ import java.util.Properties;
 public class ReadConfig {
 
 //	public static String filedir;
-//	public static int thread;
+	public static int thread;
 //	public static boolean isDebug;
 	public static boolean isProxy;
 	public static boolean isuseGoAgent;
@@ -58,7 +58,7 @@ public class ReadConfig {
 			}
 		}
 //		filedir = properties.getProperty("filedir");
-//		thread = Integer.parseInt(properties.getProperty("thread"));
+		thread = Integer.parseInt(properties.getProperty("thread"));
 //		isDebug = properties.get("debug").equals("true") ? true : false;
 		isProxy = properties.get("isProxy").equals("true") ? true : false;
 		isuseGoAgent = properties.get("isuseGoAgent").equals("true") ? true : false;
@@ -80,7 +80,7 @@ public class ReadConfig {
 	public static void showConfig() {
 		System.out.println("============================================");
 //		System.out.println("文件地址： " + filedir);
-//		System.out.println("线程数：  "+ thread);
+		System.out.println("线程数：  "+ thread);
 //		System.out.println("debug: " + isDebug);
 		System.out.println("isProxy: " + isProxy);
 		System.out.println("isuseGoAgent: " + isuseGoAgent);

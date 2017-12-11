@@ -24,7 +24,13 @@ import utils.TimeUtils;
 public class test {
 
 	/**
-	 * 获取页面的url
+	 * 抓取网站
+	 *
+	 * @author guosuzhou
+	 *
+	 * @return
+	 *
+	 *date 2017年12月9日 下午9:53:01
 	 */
 	public static List<String> getUrlList(){
 		
@@ -72,7 +78,7 @@ public class test {
 		
 	}
 	
-	public static void main(String[] args) {
+	public static void getData(){
 		List<String> listURL=IOUtils.ReadFile_txt("./URL_List.txt");
 		if(listURL==null||listURL.size()<=0||(listURL.size()==1&&listURL.get(0).trim().length()<0)){
 			listURL=getUrlList();
@@ -83,7 +89,6 @@ public class test {
 		try {
 			//抓取字段信息
 			while(listURL.size()>0){
-				
 				String urlpage=listURL.get(0);
 				if(ReadConfigList.isPre){
 					urlpage=ReadConfigList.prefix+urlpage;
@@ -98,7 +103,6 @@ public class test {
 						if(listURL!=null&&listURL.size()>0){
 							IOUtils.WriteFile_txt("./URL_List.txt",listURL);
 						}
-						
 						throw new Exception("ip失效，请修改ip,或者增加睡眠时间");
 					}
 				} catch (Exception e) {
@@ -113,14 +117,25 @@ public class test {
 					while(index<dataBase.length){
 						String selector=pathMap.get(dataBase[index]);
 						String data_sub=pathMap.get(dataBase[index]+"_sub");
+						String attr=pathMap.get(dataBase[index]+"_attr");
 						String str=null;
 						if(selector.equals("pageurl")){
-							str=urlpage;
+							str=urlpage.trim();
 						}else if(selector.equals("pagehtml")){
-							str=document.toString();
+							str=document.toString().trim();
 						}else{
 							if(selector!=null&&selector.length()>0){
-								str=document.select(selector).text();
+								if(attr!=null&&attr.length()>0&&!attr.equals("text")){
+									str=document.select(selector).attr(attr).trim();
+									if(attr.equals("pagehtml")){
+										str=document.select(selector).toString().trim();
+									}
+								}else if(attr.equals("pagehtml")){
+									str=document.toString().trim();
+								}else{
+									str=document.select(selector).text().trim();
+								}
+								
 								if(data_sub!=null&&data_sub.length()>0){
 									if(data_sub.contains(",")){
 										String subStrs[]=data_sub.split(",");
@@ -138,7 +153,7 @@ public class test {
 											end=str.indexOf(subStrs[1]);
 										}
 										try {
-											str=str.substring(start, end);
+											str=str.substring(start, end).trim();
 										} catch (Exception e) {
 											String massage=e.getMessage();
 											String errorLog="字符截取，异常信息："+massage+"；str:"+str+";总长："+str.length()+"截取的段："+start+","+end+"；url:"+urlpage+"发生时间："+TimeUtils.getTime();
@@ -147,10 +162,10 @@ public class test {
 									}else{
 										try {
 											int index_num=Integer.valueOf(data_sub);
-											str=str.substring(index_num);
+											str=str.substring(index_num).trim();
 										} catch (Exception e) {
 											try {
-												str=str.substring(str.indexOf(data_sub)+data_sub.length());
+												str=str.substring(str.indexOf(data_sub)+data_sub.length()).trim();
 											} catch (Exception e2) {
 												String massage=e2.getMessage();
 												String errorLog="字符截取，异常信息："+massage+"；str:"+str+";总长："+str.length()+"截取的段："+str.indexOf(data_sub)+data_sub.length()+"；url:"+urlpage+"发生时间："+TimeUtils.getTime();
@@ -159,7 +174,7 @@ public class test {
 										}
 									}
 								}else{
-									str=str;
+									str=str.trim();
 								}
 							}else
 								str="";
@@ -216,5 +231,9 @@ public class test {
 			ErrorLog.addErrorLog(errorLog);
 			throw new RuntimeException(e);
 		}
+	}
+	public static void main(String[] args) {
+		
+		getData();
 	}
 }
